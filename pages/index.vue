@@ -1,8 +1,9 @@
 <template>
-    <div>
+    <div class="container">
         <el-button> ElButton </el-button>
         <h1>snow</h1>
         <div class="test1">
+            123456
             <NuxtLink to="/user/1">user-id-1</NuxtLink>
         </div>
         <div>
@@ -43,5 +44,14 @@ function toUser() {
 
 </script>
 
-<style scoped lang="sass">
+<style scoped lang="scss">
+
+.container{
+    h1{
+    color: red;
+}
+    .test1{
+        color: red;
+    }
+}
 </style>

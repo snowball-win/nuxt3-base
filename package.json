@@ -16,6 +16,7 @@
     "unplugin-vue-components": "^0.22.12"
   },
   "dependencies": {
-    "element-plus": "^2.2.27"
+    "element-plus": "^2.2.27",
+    "tslint": "^6.1.3"
   }
 }

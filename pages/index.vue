@@ -2,7 +2,7 @@
     <div>
         <el-button> ElButton </el-button>
         <h1>snow</h1>
-        <div>
+        <div class="test1">
             <NuxtLink to="/user/1">user-id-1</NuxtLink>
         </div>
         <div>
@@ -16,14 +16,15 @@
         </div>
         <div>
             <img src="~/assets/imgs/nginx.jpg" alt="nginx">
-            <img src="~/public/imgs/nginx.jpg" alt="nginx">
+            <!-- <img src="~/public/imgs/nginx.jpg" alt="nginx"> public目录下不需要写public，直接从public下层目录写即可-->
+            <img src="/imgs/nginx.jpg" alt="nginx">
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-const { data } = await useFetch('https://www.baidu.com')
-console.log('26', data)
+// const { data } = await useFetch('https://www.baidu.com')
+// console.log('26', data)
 // import {config1} from "../utils/api"
 // config1('https://baidu.com').then(res => {
 //   console.log('27', res)
@@ -42,5 +43,5 @@ function toUser() {
 
 </script>
 
-<style scoped>
+<style scoped lang="sass">
 </style>

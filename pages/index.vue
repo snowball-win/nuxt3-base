@@ -24,8 +24,17 @@
 </template>
 
 <script setup lang="ts">
-// const { data } = await useFetch('https://www.baidu.com')
+// const { data } = await useFetch('https://md.heng-tai.com.cn/m-staff-center/api/v1/role/pageList',{
+//   method: "get",
+// })
 // console.log('26', data)
+
+// const res = $fetch('https://md.heng-tai.com.cn/m-staff-center/api/v1/role/pageList')
+// console.log('32fetch', res)
+
+const res = $fetch('/m-staff-center/api/v1/role/pageList')
+console.log('36$fetch', res)
+
 // import {config1} from "../utils/api"
 // config1('https://baidu.com').then(res => {
 //   console.log('27', res)

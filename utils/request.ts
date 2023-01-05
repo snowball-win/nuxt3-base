@@ -1,7 +1,7 @@
 import { _AsyncData } from 'nuxt3/dist/app/composables/asyncData'
 //import baseUrl from './baseUrl'
 import { ElMessage } from 'element-plus'
- 
+
 let baseUrl = ''
 // 指定后端返回的基本数据类型
 export interface ResponseConfig {

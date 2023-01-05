@@ -32,8 +32,18 @@
 // const res = $fetch('https://md.heng-tai.com.cn/m-staff-center/api/v1/role/pageList')
 // console.log('32fetch', res)
 
-const res = $fetch('/m-staff-center/api/v1/role/pageList')
+const token = useCookie("token");
+console.log('36token', token.value);
+const res = $fetch('https://md.heng-tai.com.cn/m-staff-center/api/v1/role/pageList',{
+    headers: {
+        'Authorization' : `Bearer ${token.value}`
+    }
+})
 console.log('36$fetch', res)
+
+console.log('36token', token.value);
+const res2 = $fetch('https://md.heng-tai.com.cn/m-staff-center/api/v1/role/pageList')
+console.log('46$fetch', res2)
 
 // import {config1} from "../utils/api"
 // config1('https://baidu.com').then(res => {

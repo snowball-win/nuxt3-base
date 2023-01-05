@@ -3,6 +3,8 @@ import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import IconsResolver from "unplugin-icons/resolver";
 const lifecycle = process.env.npm_lifecycle_event;
+import { loadEnv } from 'vite'
+console.log('基础服务路径', loadEnv(process.argv[process.argv.length-1], './env').VITE_SERVER_NAME)
 
 export default defineNuxtConfig({
     ssr: true,

@@ -2,7 +2,11 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --mode dev",
+    "test": "nuxt dev --mode test",
+    "uat": "nuxt dev --mode uat",
+    "pre": "nuxt dev --mode pre",
+    "prd": "nuxt dev --mode prd",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"

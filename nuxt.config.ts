@@ -13,23 +13,23 @@ export default defineNuxtConfig({
     //         apiBase: 'm-staff-center/'
     //     }
     // },    
-    nitro: {
-        devProxy: {
-            '/m-staff-center/': {
-                target: 'https://md.heng-tai.com.cn',
-                changeOrigin: true
-            },
-        }
-    },
+    // nitro: {
+    //     devProxy: {
+    //         '/m-staff-center/': {
+    //             target: 'https://md.heng-tai.com.cn',
+    //             changeOrigin: true
+    //         },
+    //     }
+    // },
     vite: {
-        // server: {
-        //     proxy: {
-        //         '/m-staff-center': {
-        //             target: 'https://md.heng-tai.com.cn',
-        //             changeOrigin: true
-        //         },
-        //     }
-        // },
+        server: {
+            proxy: {
+                '/m-staff-center': {
+                    target: 'https://md.heng-tai.com.cn',
+                    changeOrigin: true
+                },
+            }
+        },
         plugins: [
             AutoImport({ // 自动引入element
                 resolvers: [

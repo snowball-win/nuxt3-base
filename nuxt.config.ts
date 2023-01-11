@@ -22,14 +22,14 @@ export default defineNuxtConfig({
     //     }
     // },
     vite: {
-        server: {
-            proxy: {
-                '/m-staff-center': {
-                    target: 'https://md.heng-tai.com.cn',
-                    changeOrigin: true
-                },
-            }
-        },
+        // server: {
+        //     proxy: {
+        //         '/m-staff-center': {
+        //             target: 'https://md.heng-tai.com.cn',
+        //             changeOrigin: true
+        //         },
+        //     }
+        // },
         plugins: [
             AutoImport({ // 自动引入element
                 resolvers: [

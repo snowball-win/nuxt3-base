@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { config1 } from "../utils/api" // import 引入只能在最上边一行
+import { config1, getVideoList } from "../utils/api" // import 引入只能在最上边一行
 const token = useCookie("token");
 // const { data } = await useFetch('https://md.heng-tai.com.cn/m-staff-center/api/v1/role/pageList',{
 //   method: "get",
@@ -45,6 +45,12 @@ config1('').then((res: any) => {
   console.log('27', res)
 }).catch((err: any)=>{
   console.log('29', err)
+})
+// 获取视频列表
+getVideoList('').then((res: any) => {
+  console.log('51', res)
+}).catch((err: any)=>{
+  console.log('54', err)
 })
 
 </script>

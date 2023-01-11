@@ -1,8 +1,6 @@
 import { _AsyncData } from 'nuxt3/dist/app/composables/asyncData'
-//import baseUrl from './baseUrl'
 import { ElMessage } from 'element-plus'
 
-let baseUrl = ''
 // 指定后端返回的基本数据类型
 export interface ResponseConfig {
     code: number,
@@ -12,13 +10,17 @@ export interface ResponseConfig {
 }
 export interface ValueConfig {
     value: any,
- 
 }
- 
+
 const fetch = (url: string, options?: any): Promise<any>  => {
+    const token = useCookie("token");
+    const headers = { // headers信息
+        'Authorization' : `Bearer ${token.value}`
+    }
+    const { public: { baseUrl } } = useRuntimeConfig() // 3.0正式版环境变量要从useRuntimeConfig里的public拿
     const reqUrl = baseUrl + url
     return new Promise((resolve, reject) => {
-        useFetch(reqUrl, { ...options }).then(({ data, error }: _AsyncData) => {
+        useFetch(reqUrl, { ...options, headers }).then(({ data, error }: _AsyncData) => {
             if (error.value) {
                 reject(error.value)
                 return

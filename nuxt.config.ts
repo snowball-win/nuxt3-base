@@ -8,11 +8,11 @@ console.log('基础服务路径', loadEnv(process.argv[process.argv.length-1], '
 
 export default defineNuxtConfig({
     ssr: true,
-    // runtimeConfig: { // 运行时常量
-    //     public: { // 客户端-服务的都能访问
-    //         apiBase: 'm-staff-center/'
-    //     }
-    // },    
+    runtimeConfig: { // 运行时常量
+        public: { // 客户端-服务的都能访问
+            baseUrl: loadEnv(process.argv[process.argv.length-1], './env').VITE_SERVER_NAME
+        }
+    },    
     // nitro: {
     //     devProxy: {
     //         '/m-staff-center/': {

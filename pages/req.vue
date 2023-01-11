@@ -1,9 +1,6 @@
 <template>
     <div class="container">
         <h1>snow</h1>
-        <div class="test1">
-            123456
-        </div>
     </div>
 </template>
 

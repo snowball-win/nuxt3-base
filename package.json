@@ -20,6 +20,8 @@
     "unplugin-vue-components": "^0.22.12"
   },
   "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "@amap/amap-jsapi-types": "^0.0.10",
     "element-plus": "^2.2.27",
     "tslint": "^6.1.3"
   }

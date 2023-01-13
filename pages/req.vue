@@ -5,8 +5,9 @@
 </template>
 
 <script setup lang="ts">
-import { config1, getVideoList } from "../utils/api" // import 引入只能在最上边一行
-const token = useCookie("token");
+// import { config1, getVideoList } from "../utils/api" // import 引入只能在最上边一行
+import { config1, getVideoList } from "~/apis/m-staff-center" // import 引入只能在最上边一行
+// const token = useCookie("token");
 // const { data } = await useFetch('https://md.heng-tai.com.cn/m-staff-center/api/v1/role/pageList',{
 //   method: "get",
 //       headers: {

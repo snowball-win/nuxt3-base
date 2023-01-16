@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <h1>snow</h1>
+        <div>{{ data }}</div>
     </div>
 </template>
 
@@ -48,8 +49,11 @@ config1('').then((res: any) => {
   console.log('29', err)
 })
 // 获取视频列表
+
+let data = ref('')
 getVideoList('').then((res: any) => {
   console.log('51', res)
+  data = res
 }).catch((err: any)=>{
   console.log('54', err)
 })

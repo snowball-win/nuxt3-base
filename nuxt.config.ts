@@ -23,6 +23,7 @@ export default defineNuxtConfig({
             meta: [
                 { name: "keywords", content: "vue3,nuxt3,ssr,snow" },
                 { name: "description", content: "snow-nuxt3-web" },
+                // { name: "viewport", content: "user-scalable=0,width=device-width, initial-scale=1.0" },
             ],
             script: [
                 {

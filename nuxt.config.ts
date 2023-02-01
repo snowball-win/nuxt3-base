@@ -67,6 +67,15 @@ export default defineNuxtConfig({
                 )]
             }),
         ],
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    additionalData: [
+                        '@use "~/assets/scss/global.scss" as *;',
+                    ]
+                }
+            }
+        }
     },
     components: true,
     css: ["~/assets/scss/index.scss"],

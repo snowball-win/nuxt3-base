@@ -43,17 +43,17 @@ import { config1, getVideoList } from "~/apis/m-staff-center" // import 引入�
 // console.log('29data', data)
 
 // 基于这个可以做一个封装
-config1('').then((res: any) => {
-  console.log('27', res)
-}).catch((err: any)=>{
-  console.log('29', err)
-})
+// config1('').then((res: any) => {
+//   console.log('27', res)
+// }).catch((err: any)=>{
+//   console.log('29', err)
+// })
 // 获取视频列表
 
 let data = ref('')
 getVideoList('').then((res: any) => {
   console.log('51', res)
-  data = res
+  data.value = res
 }).catch((err: any)=>{
   console.log('54', err)
 })

@@ -22,7 +22,10 @@
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
     "@amap/amap-jsapi-types": "^0.0.10",
+    "autoprefixer": "^10.4.13",
     "element-plus": "^2.2.27",
+    "postcss": "^8.4.21",
+    "postcss-pxtorem": "^6.0.0",
     "tslint": "^6.1.3"
   }
 }

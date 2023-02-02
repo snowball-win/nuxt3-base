@@ -23,7 +23,7 @@ export default defineNuxtConfig({
             meta: [
                 { name: "keywords", content: "vue3,nuxt3,ssr,snow" },
                 { name: "description", content: "snow-nuxt3-web" },
-                // { name: "viewport", content: "user-scalable=0,width=device-width, initial-scale=1.0" },
+                { name: "viewport", content: "user-scalable=0,width=device-width, initial-scale=1.0" },
             ],
             script: [
                 {
@@ -80,6 +80,16 @@ export default defineNuxtConfig({
     components: true,
     css: ["~/assets/scss/index.scss"],
     // transpile: ["element-plus"],
+    postcss: {
+        plugins: {
+            'postcss-pxtorem': {
+                rootValue: 37.5,
+                propList: ['*'],
+                mediaQuery: false, // 是否允许使用媒体查询，false媒体查询的代码可用，true不可用
+                exclude: 'ignore',
+            },
+        },
+    },
     build: {
         transpile: lifecycle === "build" ? ["element-plus"] : [],
     },

@@ -33,14 +33,14 @@ export default defineNuxtConfig({
             ],
         }
     },
-    // nitro: {
-    //     devProxy: {
-    //         '/m-staff-center/': {
-    //             target: 'https://md.heng-tai.com.cn',
-    //             changeOrigin: true
-    //         },
-    //     }
-    // },
+    nitro: {
+        devProxy: {
+            '/api': {
+                target: 'https://md.heng-tai.com.cn',
+                changeOrigin: true,
+            },
+        }
+    },
     vite: {
         // server: {
         //     proxy: {
@@ -82,6 +82,9 @@ export default defineNuxtConfig({
     // transpile: ["element-plus"],
     postcss: {
         plugins: {
+            "autoprefixer": {
+                overrideBrowserslist: ["last 5 version", ">1%", "ie >=8"]
+            },
             'postcss-pxtorem': {
                 rootValue: 37.5,
                 propList: ['*'],

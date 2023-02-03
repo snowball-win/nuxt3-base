@@ -23,8 +23,8 @@ import { config1, getVideoList } from "~/apis/m-staff-center" // import 引入�
 // })
 // console.log('26', data)
 
-// const res = $fetch('https://md.heng-tai.com.cn/m-staff-center/api/v1/role/pageList')
-// console.log('32fetch', res)
+const res = $fetch('/api/m-staff-center/api/v1/role/pageList')
+console.log('32fetch', res)
 
 // const token = useCookie("token");
 // console.log('36token', token.value);

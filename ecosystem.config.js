@@ -2,7 +2,7 @@ module.exports = {
     apps: [
       {
         name: 'NuxtAppName',
-        exec_mode: 'cluster', // fork , cluster集群
+        exec_mode: 'fork', // fork , cluster集群
         instances: '1',
         script: './.output/server/index.mjs',
         env: {

@@ -19,6 +19,7 @@
             <img src="~/assets/imgs/nginx.jpg" alt="nginx">
             <!-- <img src="~/public/imgs/nginx.jpg" alt="nginx"> public目录下不需要写public，直接从public下层目录写即可-->
             <img src="/imgs/nginx.jpg" alt="nginx">
+            <div v-dompurify-html="'<div>k</div>'"></div>
         </div>
     </div>
 </template>

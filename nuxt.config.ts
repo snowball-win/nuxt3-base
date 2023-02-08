@@ -20,6 +20,9 @@ export default defineNuxtConfig({
             htmlAttrs: {
                 lang: 'zh-CN'
             },
+            link: [
+                { rel: 'stylesheet', type: 'text/css', href: 'https://unpkg.com/swiper@8/swiper-bundle.css'}
+            ],
             meta: [
                 { name: "keywords", content: "vue3,nuxt3,ssr,snow" },
                 { name: "description", content: "snow-nuxt3-web" },
@@ -29,6 +32,10 @@ export default defineNuxtConfig({
                 {
                     type: 'text/javascript',
                     src: 'https://webapi.amap.com/maps?v=2.0&key=296cad8de4082b7f0975ed1c39ea12f5'
+                },
+                {
+                    type: 'text/javascript',
+                    src: 'https://unpkg.com/swiper@8/swiper-bundle.js'
                 }
             ],
         }
@@ -94,6 +101,6 @@ export default defineNuxtConfig({
         },
     },
     build: {
-        transpile: lifecycle === "build" ? ["element-plus"] : [],
+        transpile: lifecycle === "build" ? ["element-plus", "swiper"] : [],
     },
 })

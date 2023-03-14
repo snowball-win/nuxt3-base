@@ -29,7 +29,7 @@ config1('').then((res: any) => {
 })
 // 获取视频列表
 getVideoList('').then((res: any) => {
-  console.log('51', res)
+  // console.log('51', res)
 }).catch((err: any)=>{
   console.log('54', err)
 })

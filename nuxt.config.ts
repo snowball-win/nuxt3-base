@@ -40,14 +40,14 @@ export default defineNuxtConfig({
             ],
         }
     },
-    nitro: {
-        devProxy: {
-            '/api': {
-                target: 'https://md.heng-tai.com.cn',
-                changeOrigin: true,
-            },
-        }
-    },
+    // nitro: {
+    //     devProxy: {
+    //         '/api': {
+    //             target: 'https://md.heng-tai.com.cn',
+    //             changeOrigin: true,
+    //         },
+    //     }
+    // },
     vite: {
         // server: {
         //     proxy: {

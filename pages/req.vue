@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1>snow</h1>
+        <h1 @click="getVideo">snow</h1>
         <div>{{ data }}</div>
     </div>
 </template>
@@ -23,8 +23,8 @@ import { config1, getVideoList } from "~/apis/m-staff-center" // import 引入�
 // })
 // console.log('26', data)
 
-const res = $fetch('/api/m-staff-center/api/v1/role/pageList')
-console.log('32fetch', res)
+// const res = $fetch('/m-staff-center/api/v1/role/pageList')
+// console.log('32fetch', res)
 
 // const token = useCookie("token");
 // console.log('36token', token.value);
@@ -51,12 +51,26 @@ console.log('32fetch', res)
 // 获取视频列表
 
 let data = ref('')
-getVideoList('').then((res: any) => {
-  console.log('51', res)
-  data.value = res
-}).catch((err: any)=>{
-  console.log('54', err)
-})
+// getVideoList('').then((res: any) => {
+//   console.log('51', res)
+//   data.value = res
+// }).catch((err: any)=>{
+//   console.log('54', err)
+// })
+
+
+
+const getVideo = function () {
+    console.log('64ddd')
+    getVideoList('').then((res: any) => {
+        // console.log('51', res)
+        data.value = res
+    }).catch((err: any)=>{
+        console.log('54', err)
+    })
+}
+
+getVideo()
 
 </script>
 
